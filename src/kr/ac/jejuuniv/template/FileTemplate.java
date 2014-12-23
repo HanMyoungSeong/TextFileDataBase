@@ -1,4 +1,4 @@
-package kr.ac.jejuuniv.template;
+package kr.ac.jejuuniv.library.template;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -32,7 +32,7 @@ public class FileTemplate<T> {
 		try {
 			generatedHorizontalLine();
 			bufferedWriter = new BufferedWriter(new FileWriter(file, true));
-			bufferedWriter.write(this.horizontalLineCount + " " + data);
+			bufferedWriter.write(this.horizontalLineCount + "/" + data);
 			bufferedWriter.newLine();
 
 		} catch (IOException e) {
@@ -124,7 +124,7 @@ public class FileTemplate<T> {
 				String line = null;
 				String number = null;
 				while ((line = bufferedReader.readLine()) != null) {
-					number = line.split(" ")[0];
+					number = line.split("/")[0];
 				}
 				if (number != null)
 					horizontalLineCount = Integer.parseInt(number) + 1;

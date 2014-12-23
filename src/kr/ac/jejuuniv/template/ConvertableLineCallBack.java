@@ -1,4 +1,4 @@
-package kr.ac.jejuuniv.template;
+package kr.ac.jejuuniv.library.template;
 
 import java.io.BufferedReader;
 import java.io.PrintWriter;
